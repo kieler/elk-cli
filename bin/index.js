@@ -35,5 +35,5 @@ if (options.g !== undefined) {
     process.exit();
 }
 elk.layout(graph)
-       .then(console.log)
+       .then(function(g) {console.log(JSON.stringify(g))})
        .catch(console.error);
