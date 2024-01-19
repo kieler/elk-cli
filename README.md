@@ -4,7 +4,7 @@ This is a simple wrapper around [elkjs](https://github.com/kieler/elkjs) to enab
 ## Installation
 The elk cli tool can be installed using node:
 ```
-> npm install -g elk-cli
+> npm install -g @kieler/elk-cli
 ```
 and then run as
 ```

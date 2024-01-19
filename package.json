@@ -1,5 +1,5 @@
 {
-  "name": "elk-cli",
+  "name": "@kieler/elk-cli",
   "version": "0.0.1",
   "description": "A commandline wrapper for elkjs.",
   "main": "bin/index.js",
@@ -8,6 +8,10 @@
   },
   "bin": {
     "elk": "./bin/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kieler/elk-cli.git"
   },
   "keywords": [
     "cli",
