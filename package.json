@@ -11,7 +11,9 @@
   },
   "keywords": [
     "cli",
-    "layout"
+    "layout",
+    "graph",
+    "layered"
   ],
   "author": "Maximilian Kasperowski",
   "license": "EPL-2.0",
