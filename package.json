@@ -1,0 +1,22 @@
+{
+  "name": "elk-cli",
+  "version": "0.0.1",
+  "description": "A commandline wrapper for elkjs.",
+  "main": "bin/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "bin": {
+    "elk": "./bin/index.js"
+  },
+  "keywords": [
+    "cli",
+    "layout"
+  ],
+  "author": "Maximilian Kasperowski",
+  "license": "EPL-2.0",
+  "dependencies": {
+    "elkjs": "^0.9.1",
+    "yargs": "^17.7.2"
+  }
+}
