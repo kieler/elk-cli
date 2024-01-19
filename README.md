@@ -11,8 +11,20 @@ and then run as
 > elk -f <inputfile>
 ```
 
+You can also run it directly using npx
+```
+> npx @kieler/elk-cli -f <inputfile>
+```
+
 ## Usage
 
+Layout a graph provided in a json file:
 ```
 > elk -f examples/graph.json
 ```
+
+Layout a graph directly as an argument:
+```
+> elk -g "{\"id\": \"root\"}"
+```
+When passing in the graph as a string directly make sure to escape all double quotes that are part of the JSON.
