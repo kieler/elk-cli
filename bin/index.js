@@ -20,7 +20,8 @@ const usage = "Supply an elkj graph directly with the -g option or read in an el
 const options = yargs.usage(usage)
                      .option("g", {alias: "graph", describe: "Input elkj graph", type: "string", demandOption: false})
                      .option("f", {alias: "file", describe: "Input file", type: "string", demandOption: false})
-                     .option("s", {alias: "svg", describe: "Render output as svg and write to file", type: "string", demandOPtion: false})
+                     .option("s", {alias: "svg", describe: "Render output as svg and write to file", type: "string", demandOption: false})
+                     .option("c", {alias: "css", describe: "CSS to be used for svg", type: "string", demandOption: false})
                      .help(true)
                      .argv;
 
@@ -51,7 +52,15 @@ elk.layout(graph)
        .then(function(g) {
             if (options.s !== undefined) {
                 let renderer = new elksvg.Renderer();
-                let svg = renderer.toSvg(g);
+                let svg = {};
+                if (options.c !== undefined) {
+                    let css = fs.readFileSync(options.c, "utf-8");
+                    svg = renderer.toSvg(g,
+                        styles=css,
+                    );
+                } else {
+                    svg = renderer.toSvg(g);
+                }
                 fs.writeFileSync(options.s, svg, "utf-8");
             }
             console.log(JSON.stringify(g))
