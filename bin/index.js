@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /*******************************************************************************
- * Copyright (c) 2017 Kiel University and others.
+ * Copyright (c) 2024 Kiel University and others.
  * 
  * This program and the accompanying materials are made 
  * available under the terms of the Eclipse Public License 2.0 
