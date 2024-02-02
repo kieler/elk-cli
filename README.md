@@ -11,11 +11,24 @@ and then run as
 > elk -f <inputfile>
 ```
 
+You can also run it directly using npx
+```
+> npx @kieler/elk-cli -f <inputfile>
+```
+
 ## Usage
 
+Layout a graph provided in a json file:
 ```
 > elk -f examples/graph.json
 ```
+
+Layout a graph directly as an argument:
+```
+> elk -g "{\"id\": \"root\"}"
+```
+
+When passing in the graph as a string directly make sure to escape all double quotes that are part of the JSON.
 
 ## Generate SVGs
 You can automatically generate a simple SVG of the laid out graph using the `-s <output.svg>` option. A css file for styling may be supplied using the `-c <style.css>` file. The examples folder contains an example style file.
