@@ -1,0 +1,35 @@
+rect {
+    opacity: 0.8;
+    fill: #68d639;
+    stroke-width: 1;
+    stroke: #222222;
+}
+
+rect.port {
+    opacity: 1;
+    fill: #0c9a55;
+}
+
+text {
+    font-size: 10px;
+    font-family: sans-serif;
+    /* in elk's coordinates "hanging" would be the correct value" */
+    dominant-baseline: hanging;
+    text-align: left;
+}
+
+g.port>text {
+    font-size: 8px;
+}
+
+polyline {
+    fill: none;
+    stroke: rgb(104, 2, 115);
+    stroke-width: 1;
+}
+
+path {
+    fill: none;
+    stroke: rgb(104, 2, 115);
+    stroke-width: 1;
+}
