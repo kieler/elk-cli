@@ -16,3 +16,6 @@ and then run as
 ```
 > elk -f examples/graph.json
 ```
+
+## Generate SVGs
+You can automatically generate a simple SVG of the laid out graph using the `-s <output.svg>` option. A css file for styling may be supplied using the `-c <style.css>` file. The examples folder contains an example style file.
