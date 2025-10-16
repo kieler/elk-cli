@@ -1,6 +1,6 @@
 {
   "name": "@kieler/elk-cli",
-  "version": "0.0.3",
+  "version": "0.1.0",
   "description": "A commandline wrapper for elkjs.",
   "main": "bin/index.js",
   "scripts": {
@@ -22,7 +22,7 @@
   "author": "Maximilian Kasperowski",
   "license": "EPL-2.0",
   "dependencies": {
-    "elkjs": "^0.9.1",
+    "elkjs": "^0.11.0",
     "elkjs-svg": "^0.2.1",
     "yargs": "^17.7.2"
   }
