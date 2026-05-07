@@ -22,10 +22,15 @@ const options = yargs.usage(usage)
                      .option("f", {alias: "file", describe: "Input file", type: "string", demandOption: false})
                      .option("s", {alias: "svg", describe: "Render output as svg and write to file", type: "string", demandOption: false})
                      .option("c", {alias: "css", describe: "CSS to be used for svg", type: "string", demandOption: false})
+                     .option("l", {alias: "logging", describe: "Enable elkjs logging", type: "boolean", demandOption: false})
+                     .option("t", {alias: "time", describe: "Enable elkjs execution time measuring", type: "boolean", demandOption: false})
                      .help(true)
                      .argv;
 
 let graph = {}
+let logging = false
+let measureExecutionTime = false
+
 if (options.g !== undefined) {
     console.log(options.g);
     graph = JSON.parse(options.g);
@@ -48,7 +53,8 @@ if (options.g !== undefined) {
     console.log("Please supply an elkg graph. Use --help for usage information.")
     process.exit();
 }
-elk.layout(graph)
+
+elk.layout(graph, {"logging": options.l, "measureExecutionTime": options.t})
        .then(function(g) {
             if (options.s !== undefined) {
                 let renderer = new elksvg.Renderer();
